@@ -53,7 +53,7 @@ nav li:first-child {
     background-color: white;
     backdrop-filter: blur(10px);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
@@ -67,3 +67,36 @@ nav li:first-child {
     width: 100%;
 }
 
+.main-menu-icon, .main-menu-icon-div, .main-close-icon, .main-close-icon-div {
+    cursor: pointer;
+}
+
+.main-close-icon {
+    position: relative;
+    left: 0%;
+}
+
+.menu-sidebar-li-element, .main-close-icon {
+    position: relative;
+    right: 10%;
+}
+
+.main-menu-icon-div {
+    display: none;
+}
+
+@media(max-width: 800px) {
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .main-menu-icon-div {
+        display: block;
+    }
+}
+
+@media(max-width: 400px) {
+    .sidebar {
+        width: 100%;
+    }
+}
